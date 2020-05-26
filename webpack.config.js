@@ -37,6 +37,7 @@ const baseConfig = {
   },
   externals: {
     grappelli: 'grappelli',
+    grp: 'grp',
     'django/date-time-shortcuts': 'DateTimeShortcuts',
     'django/select-filter': 'SelectFilter'
   },
