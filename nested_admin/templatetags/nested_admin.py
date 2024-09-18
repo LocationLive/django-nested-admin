@@ -214,3 +214,12 @@ def ifnotsuit(parser, token):
     else:
         nodelist_false = template.NodeList()
     return IfConditionNode(nodelist_true, nodelist_false, 'suit' not in settings.INSTALLED_APPS)
+
+
+@register.filter(is_safe=False)
+def length_is(value, arg):
+    """Return a boolean of whether the value's length is the argument."""
+    try:
+        return len(value) == int(arg)
+    except (ValueError, TypeError):
+        return ""
